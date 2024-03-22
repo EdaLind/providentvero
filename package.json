@@ -1,0 +1,43 @@
+{
+  "name": "providentvero",
+  "version": "1.0.0",
+  "description": "ECharts for React written with Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf ./dist",
+    "lint": "tslint --force \"src/**/*.ts*\"",
+    "publish": "cp package.json *.md dist/ && pushd dist && rimraf *.tgz && npm pack && npm publish ./*.tgz && popd",
+    "publishbower": "pushd dist && rimraf *.tgz && bower register react-echarts-ts . && popd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EdaLind/providentvero.git"
+  },
+  "keywords": [
+    "illum",
+    "ECharts",
+    "excepturi"
+  ],
+  "author": "KarsonGoldner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdaLind/providentvero.git/issues"
+  },
+  "dependencies": {
+    "echarts": "^3.4.0",
+    "element-resize-event": "^2.0.7"
+  },
+  "devDependencies": {
+    "@types/echarts": "0.0.5",
+    "@types/element-resize-event": "^1.0.30",
+    "@types/react": "^15.0.14",
+    "@types/react-dom": "^0.14.23",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "rimraf": "^2.6.1",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
+  }
+}
